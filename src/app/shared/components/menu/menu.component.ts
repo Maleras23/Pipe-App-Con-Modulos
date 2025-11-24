@@ -5,7 +5,11 @@ import { MenuItem } from 'primeng/api';
   selector: 'shared-menu',
   standalone: false,
   templateUrl: './menu.component.html',
-  styles: ``,
+  styles: `.custom-menu {
+
+  display: inline-block;
+
+}`,
 })
 export class MenuComponent {
   public menuItems: MenuItem[] = [];
@@ -18,18 +22,32 @@ export class MenuComponent {
   ngOnInit() {
     this.menuItems = [
       {
-        label: 'new',
-        icon: 'pi pi-plus',
-
+        label: 'Pipes de Angular',
+        icon: 'pi pi-desktop',
+        items: [
+          {
+            label: 'Textos y fechas',
+            icon: 'pi pi-align-left'
+          },
+          {
+            label: 'Numeros',
+            icon: 'pi pi-dollar'
+          },
+          {
+            label: 'No comunes',
+            icon: 'pi pi-globe'
+          },
+        ]
       },
       {
-        label: 'Open',
-        icon: 'pi pi-download',
-
-      },
-      {
-        label: 'Undo',
-        icon: 'pi pi-refresh',
+        label: 'Pipes personalizados',
+        icon: 'pi pi-cog',
+        items: [
+          {
+            label: 'Otro elemento',
+            icon: 'pi pi-cog',
+          },
+        ]
       },
     ]
   }

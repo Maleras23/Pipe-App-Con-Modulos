@@ -1,22 +1,14 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { MenuModule } from 'primeng/menu';
-import { Menu } from 'primeng/menu';
-import { ToastModule } from 'primeng/toast';
+import { MenubarModule } from 'primeng/menubar';
 
 
 
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule,
-    Menu,
-    ToastModule,
-    MenuModule,
-  ],
   exports: [
     MenuModule,
+    MenubarModule
   ]
 })
 export class PrimeNgModule { }

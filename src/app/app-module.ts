@@ -19,7 +19,7 @@ import { SharedModule } from './shared/shared-module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PrimeNgModule,
+    // PrimeNgModule,
     SharedModule,
   ],
   providers: [
@@ -29,7 +29,7 @@ import { SharedModule } from './shared/shared-module';
       theme: {
         preset: Aura,
         options: {
-          darkModeSelector: false || 'none'
+          // darkModeSelector: false || 'none'
         }
       }
     })
